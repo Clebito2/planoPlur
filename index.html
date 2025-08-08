@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Ação Estratégico | PLUR - Live Consultoria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --live-azul-petroleo: #06192a;
+            --live-verde-vibrante: #00e800;
+            --live-branco: #ffffff;
+            --font-poppins: 'Poppins', sans-serif;
+            --font-merriweather: 'Merriweather', serif;
+        }
+        body {
+            font-family: var(--font-poppins);
+            background-color: var(--live-azul-petroleo);
+            color: var(--live-branco);
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+        .font-merriweather { font-family: var(--font-merriweather); }
+        .text-live-verde {
+            color: var(--live-verde-vibrante);
+            text-shadow: 0 0 8px rgba(0, 232, 0, 0.7);
+        }
+        .tab-button.active {
+            color: var(--live-verde-vibrante);
+            border-bottom-color: var(--live-verde-vibrante);
+        }
+        .tab-button {
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            padding: 0.75rem 0.5rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .card {
+            border: 1px solid #ffffff20;
+            border-radius: 12px;
+            background-color: #0A243D;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .tag-red { background-color: #4c1d25; color: #fca5a5; }
+        .tag-amber { background-color: #4a2c0d; color: #fcd34d; }
+        .tag-green { background-color: #14362a; color: #6ee7b7; }
+    </style>
+</head>
+<body class="bg-live-azul-petroleo">
+
+    <header class="py-4 px-8 sticky top-0 left-0 right-0 z-50 bg-live-azul-petroleo/80 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo%20live%20oficial-36.png" alt="Logo Live Consultoria" class="h-12">
+            <div class="text-right">
+                <p class="font-semibold">Plano de Ação para:</p>
+                <p class="text-gray-300" id="header-client-name">PLUR</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HERO -->
+        <section class="py-20 md:py-28 text-center">
+            <div class="container mx-auto px-4 fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                    Plano de Ação Estratégico<br class="hidden md:block"> para <span id="proposal-client-name" class="text-live-verde">PLUR</span>
+                </h1>
+                <p class="mt-4 max-w-3xl mx-auto text-gray-300 font-merriweather">Um roteiro para transformar gargalos em oportunidades, estruturando a base para um crescimento sólido e sustentável.</p>
+            </div>
+        </section>
+        
+        <!-- SEÇÃO DIAGNÓSTICO GERAL -->
+        <section class="py-16 md:py-24 bg-black/20">
+            <div class="container mx-auto px-4 md:px-16 fade-in">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Diagnóstico Geral</h2>
+                    <p class="mt-2 text-gray-400">A síntese das análises revela uma empresa de dois extremos.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="card p-8 border-l-4 border-live-verde">
+                        <h3 class="text-2xl font-bold text-live-verde mb-3">Ponto Forte: O Coração do Negócio</h3>
+                        <p class="text-gray-300">A PLUR possui uma metodologia técnica autêntica e um produto com forte identidade e propósito. A filosofia de "movimento e acolhimento" é um diferencial claro e atrai um público fiel.</p>
+                    </div>
+                    <div class="card p-8 border-l-4 border-red-500">
+                        <h3 class="text-2xl font-bold text-red-400 mb-3">Gargalo Crítico: A Estrutura de Suporte</h3>
+                        <p class="text-gray-300">A operação é minada por gargalos severos nos pilares de **Finanças, Qualidade e Documentação**. A subutilização de sistemas e a ausência total de processos formais criam riscos operacionais e limitam o potencial de crescimento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PLANO DE AÇÃO (ABAS) -->
+        <section id="action-plan" class="py-16 md:py-24 bg-live-azul-petroleo">
+            <div class="container mx-auto px-4 md:px-16 fade-in">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Projetos Prioritários por Departamento</h2>
+                    <p class="mt-2 text-gray-400">Navegue pelas abas para ver o diagnóstico e o plano de ação para cada área.</p>
+                </div>
+                <!-- Abas -->
+                <div class="flex flex-wrap justify-center border-b border-gray-700 mb-8">
+                    <button class="tab-button active text-sm md:text-lg font-semibold" onclick="openTab(event, 'financeiro')">Financeiro e Admin</button>
+                    <button class="tab-button text-sm md:text-lg font-semibold" onclick="openTab(event, 'qualidade')">Qualidade e Docs</button>
+                    <button class="tab-button text-sm md:text-lg font-semibold" onclick="openTab(event, 'tecnico')">Setor Técnico</button>
+                    <button class="tab-button text-sm md:text-lg font-semibold" onclick="openTab(event, 'comercial')">Comercial e Vendas</button>
+                    <button class="tab-button text-sm md:text-lg font-semibold" onclick="openTab(event, 'infra')">Infraestrutura</button>
+                    <button class="tab-button text-sm md:text-lg font-semibold" onclick="openTab(event, 'marketing')">Marketing</button>
+                    <button class="tab-button text-sm md:text-lg font-semibold" onclick="openTab(event, 'recepcao')">Recepção</button>
+                </div>
+                <!-- Conteúdo das Abas -->
+                <div id="tabs-container">
+                    <!-- O conteúdo será injetado aqui pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-8 text-center text-gray-400">
+            <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo%20live%20oficial-34.png" alt="Logo Live" class="h-24 mx-auto mb-6">
+            <p class="font-semibold text-white text-lg">Live Consultoria Empresarial</p>
+        </div>
+    </footer>
+
+<script>
+const planoDeAcaoData = {
+    "financeiro": {
+        "departamento": "Financeiro e Administrativo",
+        "diagnostico": "Apontado como o maior gargalo da empresa. A ausência de rotinas básicas como conciliação bancária e fluxo de caixa, somada à subutilização do sistema e falta de orçamento, mina a saúde financeira e impede a gestão estratégica.",
+        "projetos": [
+            { "prioridade": "Crítica", "titulo": "Implementação da Rotina de Conciliação Bancária Diária", "descricao": "Estabelecer como prioridade máxima a conferência diária do extrato bancário contra os lançamentos no sistema EVO. É o alicerce para qualquer controle financeiro." },
+            { "prioridade": "Alta", "titulo": "Construção do Controle de Fluxo de Caixa", "descricao": "Desenvolver uma ferramenta (planilha ou módulo do sistema) para registrar e projetar todas as entradas e saídas, dando visibilidade de curto e médio prazo." },
+            { "prioridade": "Alta", "titulo": "Criação do Calendário de Obrigações Legais e Fiscais", "descricao": "Mapear todas as licenças, impostos e taxas, com datas de vencimento e alertas, para evitar multas e problemas como a saída do Simples Nacional." },
+            { "prioridade": "Média", "titulo": "Automação do Pagamento via PIX", "descricao": "Estruturar o processo para que o comprovante PIX enviado pelo WhatsApp dê baixa automática no sistema, habilitando uma nova forma de pagamento segura." }
+        ]
+    },
+    "qualidade": {
+        "departamento": "Qualidade e Documentação",
+        "diagnostico": "Descrito como o 'pior pilar'. Inexistência total de processos de documentação, controle de qualidade e gestão do conhecimento. Os arquivos estão dispersos e não há padrões, o que representa um risco enorme para a consistência e a memória da empresa.",
+        "projetos": [
+            { "prioridade": "Crítica", "titulo": "Estruturação do Repositório Central de Documentos", "descricao": "Organizar um Google Drive corporativo, definindo uma estrutura de pastas padrão para todos os documentos vitais (contratos, licenças, manuais, etc.)." },
+            { "prioridade": "Alta", "titulo": "Desenvolvimento do Template Mestre de POP", "descricao": "Com base nas melhores práticas, criar o modelo padrão que será usado para documentar todos os processos da PLUR, garantindo consistência e profissionalismo." },
+            { "prioridade": "Média", "titulo": "Implementação da Pesquisa de Satisfação (NPS)", "descricao": "Criar e aplicar uma pesquisa periódica para medir a satisfação dos clientes, gerando dados para a melhoria contínua dos serviços." }
+        ]
+    },
+    "tecnico": {
+        "departamento": "Setor Técnico (Academia & Fisioterapia)",
+        "diagnostico": "O grande diferencial da PLUR. Possui uma metodologia autêntica e bem fundamentada, mas que reside apenas no conhecimento tácito do sócio. A falta de documentação e de sistemas de acompanhamento impede a metrificação do progresso do aluno e a escalabilidade do método.",
+        "projetos": [
+            { "prioridade": "Crítica", "titulo": "Documentação do 'Método PLUR' de Treinamento", "descricao": "Transformar o conhecimento de periodização e metodologia do Theo em um manual oficial. Este será o ativo intelectual central da empresa, base para treinamentos e marketing." },
+            { "prioridade": "Alta", "titulo": "Implementação do Registro de Progresso do Aluno", "descricao": "Ativar e treinar a equipe e os alunos para usar a função de registro de cargas e evolução do sistema EVO. Avaliar a integração com IA via WhatsApp para facilitar o uso." },
+            { "prioridade": "Alta", "titulo": "Criação do Programa de Onboarding e Treinamento para Coaches", "descricao": "Desenvolver um programa de capacitação contínua baseado no 'Método PLUR' para garantir o alinhamento de toda a equipe técnica, incluindo novos contratados." },
+            { "prioridade": "Média", "titulo": "Desenvolvimento do Protocolo de Transição Fisio-Academia", "descricao": "Criar um documento e um fluxo de comunicação padrão para a passagem de um paciente da fisioterapia para a academia, garantindo segurança e continuidade no cuidado." }
+        ]
+    },
+    "comercial": {
+        "departamento": "Comercial e Vendas",
+        "diagnostico": "Área reativa e sem estruturação. A falta de um funil de vendas, metas, processo de follow-up e material de apoio resulta em perda de leads e alta evasão de clientes por falta de um processo ativo de renovação.",
+        "projetos": [
+            { "prioridade": "Crítica", "titulo": "Obrigatoriedade do Cadastro de Leads", "descricao": "Implementar como regra inegociável o cadastro no sistema EVO de 100% das pessoas que fazem aula experimental, garantindo a captura de contatos para o funil." },
+            { "prioridade": "Alta", "titulo": "Criação do Kit Comercial Digital", "descricao": "Desenvolver um kit com apresentação da PLUR, banco de depoimentos segmentados e um documento com diferenciais e respostas para objeções comuns." },
+            { "prioridade": "Alta", "titulo": "Estruturação do Processo de Renovação", "descricao": "Definir um fluxo de contato ativo com alunos cujos planos estão próximos do vencimento, utilizando um CRM para gerenciar as interações." },
+            { "prioridade": "Média", "titulo": "Definição de Metas e Indicadores de Vendas", "descricao": "Estabelecer metas mensais de vendas e começar a acompanhar KPIs como taxa de conversão e ticket médio para uma gestão baseada em dados." }
+        ]
+    },
+    "infra": {
+        "departamento": "Infraestrutura, Higiene e Manutenção",
+        "diagnostico": "A área opera de forma reativa. Não há cronogramas de limpeza ou manutenção preventiva, o que resulta em equipamentos parados e uma percepção de descuido. Faltam controles básicos de segurança e de estoque.",
+        "projetos": [
+            { "prioridade": "Crítica", "titulo": "Criação do Checklist de Manutenção Preventiva", "descricao": "Mapear todos os equipamentos e criar um cronograma de inspeção e manutenção (troca de filtro, consertos, dedetização) para evitar paradas inesperadas." },
+            { "prioridade": "Alta", "titulo": "Contratação de Faxineira Diária e Criação de Cronograma de Limpeza", "descricao": "Efetivar a contratação da profissional de limpeza para frequência diária e criar um checklist detalhado de tarefas para cada ambiente." },
+            { "prioridade": "Alta", "titulo": "Implementação do Ponto de Venda (PDV) para Produtos", "descricao": "Instalar um sistema de autoatendimento (maquininha com catálogo) para a venda de bebidas e snacks, automatizando o caixa e o controle de estoque." },
+            { "prioridade": "Média", "titulo": "Checklist de Segurança e Qualidade", "descricao": "Estabelecer uma rotina para inspeção do kit de primeiros socorros e controle da qualidade da água e pragas, com registro dos certificados." }
+        ]
+    },
+    "marketing": {
+        "departamento": "Marketing e Comunicação",
+        "diagnostico": "Possui pontos positivos, como a logo e um calendário editorial, mas sofre com a falta de uma base estratégica. A identidade visual é inconsistente e o público-alvo não está claramente definido, o que enfraquece a comunicação.",
+        "projetos": [
+            { "prioridade": "Crítica", "titulo": "Desenvolvimento do Branding Book (Manual da Marca)", "descricao": "Criar um manual completo com as regras de aplicação da logo, paleta de cores, tipografia e tom de voz. Isso garantirá consistência em todos os canais." },
+            { "prioridade": "Alta", "titulo": "Definição e Detalhamento das Personas", "descricao": "Aprofundar o estudo sobre o público-alvo, criando 2 a 3 personas detalhadas (dores, desejos, objeções) para guiar toda a estratégia de conteúdo e vendas." },
+            { "prioridade": "Média", "titulo": "Otimização do Processo de Aprovação de Conteúdo", "descricao": "Estabelecer um fluxo mais ágil para a aprovação do calendário editorial, permitindo que a responsável pelo marketing trabalhe com mais autonomia e previsibilidade." }
+        ]
+    },
+     "recepcao": {
+        "departamento": "Recepção e Atendimento",
+        "diagnostico": "A porta de entrada da empresa opera sem padronização. A ausência de scripts, processos documentados e a subutilização do sistema geram inconsistências no atendimento e dificultam o treinamento de novos colaboradores.",
+        "projetos": [
+            { "prioridade": "Alta", "titulo": "Criação do 'Cardápio de Serviços' e Script de Atendimento", "descricao": "Desenvolver um documento completo com todos os produtos e serviços, e, com base nele, criar um script padrão para a recepção apresentar a PLUR." },
+            { "prioridade": "Alta", "titulo": "Treinamento Focado no Sistema EVO", "descricao": "Capacitar a equipe para utilizar as funcionalidades essenciais do sistema, como o cadastro completo de alunos e o agendamento." },
+            { "prioridade": "Média", "titulo": "Documentação do Processo de Agendamento (POP)", "descricao": "Criar um manual passo a passo de como realizar agendamentos, tanto para a academia quanto para a fisioterapia, para padronizar a operação." }
+        ]
+    }
+};
+
+function renderTabs() {
+    const container = document.getElementById('tabs-container');
+    container.innerHTML = ''; // Limpa o container
+
+    Object.keys(planoDeAcaoData).forEach((key, index) => {
+        const data = planoDeAcaoData[key];
+        const isActive = index === 0 ? 'active' : 'hidden';
+
+        const tabContentHTML = `
+            <div id="${key}" class="tab-content ${isActive}">
+                <div class="card p-6 md:p-8 mb-8">
+                    <h3 class="text-2xl font-bold text-white mb-2">${data.departamento}</h3>
+                    <p class="text-gray-400 font-merriweather">${data.diagnostico}</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    ${data.projetos.map(projeto => {
+                        let tagClass = 'tag-amber';
+                        if (projeto.prioridade === 'Crítica') tagClass = 'tag-red';
+                        if (projeto.prioridade === 'Média') tagClass = 'tag-green';
+                        return `
+                        <div class="card p-6 flex flex-col">
+                            <div class="flex-grow">
+                                <span class="tag ${tagClass}">${projeto.prioridade}</span>
+                                <h4 class="text-xl font-semibold text-live-verde mt-3 mb-2">${projeto.titulo}</h4>
+                                <p class="text-gray-300 text-sm">${projeto.descricao}</p>
+                            </div>
+                        </div>
+                        `;
+                    }).join('')}
+                </div>
+            </div>
+        `;
+        container.innerHTML += tabContentHTML;
+    });
+    
+    // Ativa a primeira aba por padrão
+    const firstTabButton = document.querySelector('.tab-button');
+    if(firstTabButton) firstTabButton.classList.add('active');
+    const firstTabContent = document.querySelector('.tab-content');
+    if(firstTabContent) firstTabContent.classList.remove('hidden');
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    renderTabs();
+    // Default to the first tab
+    openTab({ currentTarget: document.querySelector('.tab-button') }, 'financeiro');
+});
+
+// Função para trocar as abas
+function openTab(event, tabName) {
+    let i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.add('hidden');
+    }
+    tablinks = document.getElementsByClassName("tab-button");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove('active');
+    }
+    document.getElementById(tabName).classList.remove('hidden');
+    event.currentTarget.classList.add('active');
+}
+</script>
+</body>
+</html>
